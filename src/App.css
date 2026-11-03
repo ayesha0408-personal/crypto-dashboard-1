@@ -1,0 +1,487 @@
+.app-container {
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 6%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2563eb;
+}
+
+.logo h2 {
+  color: #111827;
+  font-size: 22px;
+}
+
+.header p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 24px;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.section-heading h1 {
+  color: #111827;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.section-heading p {
+  color: #6b7280;
+}
+
+.crypto-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.crypto-card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.crypto-card:hover {
+  transform: translateY(-4px);
+  border-color: #93b4ff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.crypto-card.selected {
+  border: 2px solid #2563eb;
+}
+
+.crypto-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.crypto-image {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.crypto-info h3 {
+  font-size: 16px;
+  color: #111827;
+}
+
+.crypto-info p,
+.market-cap p {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.crypto-price {
+  margin-bottom: 20px;
+}
+
+.crypto-price h3 {
+  font-size: 23px;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.positive {
+  color: #16a34a;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.negative {
+  color: #dc2626;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.market-cap {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 15px;
+}
+
+.market-cap h4 {
+  color: #111827;
+  margin-top: 6px;
+  font-size: 15px;
+}
+
+.status {
+  text-align: center;
+  padding: 30px;
+  color: #6b7280;
+}
+
+.error {
+  color: #dc2626;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px 20px;
+  }
+
+  .dashboard {
+    padding: 25px 16px;
+  }
+
+  .section-heading h1 {
+    font-size: 23px;
+  }
+
+  .crypto-list {
+    grid-template-columns: 1fr;
+  }
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 450px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin-bottom: 25px;
+}
+
+.search-icon {
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.search-container input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #111827;
+}
+
+.clear-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #6b7280;
+  display: flex;
+}
+
+.no-results {
+  text-align: center;
+  padding: 30px;
+  color: #6b7280;
+}
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+.chart-section {
+  background: #ffffff;
+  padding: 25px;
+  margin-top: 35px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.chart-header h2 {
+  color: #111827;
+  font-size: 21px;
+  margin-bottom: 8px;
+}
+
+.chart-header p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.time-filters {
+  display: flex;
+  gap: 8px;
+}
+
+.time-filters button {
+  padding: 9px 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #6b7280;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.time-filters button.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.chart-tooltip {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.chart-tooltip p {
+  color: #6b7280;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.chart-tooltip h3 {
+  color: #111827;
+  font-size: 16px;
+}
+
+.chart-status,
+.chart-error {
+  text-align: center;
+  padding: 40px 10px;
+  color: #6b7280;
+}
+
+.chart-error {
+  color: #dc2626;
+}
+
+@media (max-width: 600px) {
+  .chart-section {
+    padding: 16px;
+  }
+
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .time-filters {
+    width: 100%;
+  }
+
+  .time-filters button {
+    flex: 1;
+  }
+}
+.chart-scroll-target {
+  scroll-margin-top: 30px;
+}
+.refresh-timer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #777;
+}
+
+.refresh-timer strong {
+  color: #2563eb;
+}
+
+.refresh-dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+}
+
+.chart-scroll-target {
+  scroll-margin-top: 30px;
+}
+/* Theme transition */
+.app-container {
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-mode {
+  background: #f8fafc;
+  color: #1e293b;
+}
+
+.dark-mode {
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+/* Header */
+.dark-mode .header {
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+/* Cards */
+.dark-mode .crypto-card {
+  background: #1e293b;
+  color: #f1f5f9;
+  border-color: #334155;
+}
+
+.dark-mode .crypto-card p,
+.dark-mode .market-cap p {
+  color: #94a3b8;
+}
+
+/* Search */
+.dark-mode .search-container {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.dark-mode .search-container input {
+  background: transparent;
+  color: white;
+}
+
+.dark-mode .search-container input::placeholder {
+  color: #94a3b8;
+}
+
+/* Chart */
+.dark-mode .chart-section {
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+/* Toggle button */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 50%;
+  cursor: pointer;
+  background: transparent;
+  color: inherit;
+}
+
+.dark-mode .theme-toggle {
+  border-color: #475569;
+}
+/* Dark mode text visibility */
+.dark-mode {
+  color: #f1f5f9;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode p,
+.dark-mode label,
+.dark-mode span {
+  color: #f1f5f9;
+}
+
+/* Secondary text */
+.dark-mode .section-heading p,
+.dark-mode .market-cap p,
+.dark-mode .crypto-info p {
+  color: #cbd5e1;
+}
+
+/* Search input */
+.dark-mode input {
+  color: #ffffff;
+}
+
+.dark-mode input::placeholder {
+  color: #94a3b8;
+}
+
+/* Buttons */
+.dark-mode button {
+  color: #ffffff;
+}
+
+/* Chart text */
+.dark-mode .chart-section h2,
+.dark-mode .chart-section p {
+  color: #f1f5f9;
+}
+
+/* Chart time filter buttons */
+.time-filters button {
+  background: #e2e8f0;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+  padding: 9px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.time-filters button.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+/* Dark mode buttons */
+.dark-mode .time-filters button {
+  background: #334155;
+  color: #f1f5f9;
+  border-color: #475569;
+}
+
+.dark-mode .time-filters button.active {
+  background: #3b82f6;
+  color: #ffffff;
+  border-color: #3b82f6;
+}
+
+.dark-mode .time-filters button:hover {
+  background: #475569;
+}
+
+.dark-mode .time-filters button.active:hover {
+  background: #2563eb;
+}
